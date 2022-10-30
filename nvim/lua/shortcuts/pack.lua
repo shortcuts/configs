@@ -25,7 +25,7 @@ local packer_bootstrap = ensure_packer()
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	use("shortcuts/no-neck-pain.nvim")
+	use({"shortcuts/no-neck-pain.nvim", branch = "feat/split-screen-support"})
 
 	-- Telescope dependencies
 	use({
