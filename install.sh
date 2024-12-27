@@ -7,9 +7,9 @@ brew install fish
 cp ~/.config/.gitconfig ~/.gitconfig
 
 # setup fish as default shell
-fish_add_path /usr/local/Homebrew/bin
-echo /usr/local/Homebrew/bin | sudo tee -a /etc/shells
-chsh -s /usr/local/Homebrew/bin || true
+fish_add_path /opt/homebrew/bin
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish || true
 fish || true
 
 # fish plugin manager
@@ -25,10 +25,9 @@ brew install \
     jq yq fish neovim tmux rectangle starship kind \
     gh wget kubectl openvpn-connect fswatch luarocks \
     lazydocker coreutils ko bat ripgrep fd git-delta \
-    brew-cask-completion stats
+    brew-cask-completion stats zig ghostty
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform hashicorp/tap/vault
-brew install --cask alacritty --no-quarantine
 brew install --cask font-fira-mono-nerd-font
 brew install fzf && fzf --fish | source
 
