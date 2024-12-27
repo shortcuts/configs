@@ -8,8 +8,8 @@ cp ~/.config/.gitconfig ~/.gitconfig
 
 # setup fish as default shell
 fish_add_path /usr/local/Homebrew/bin
-echo /usr/local/Homebrew/bin | sudo tee -a /etc/shells
-chsh -s /usr/local/Homebrew/bin || true
+echo /usr/local/Homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish || true
 fish || true
 
 # fish plugin manager
